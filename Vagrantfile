@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       docker.image = "svanosselaer/www-qual-is-development:latest"
       docker.has_ssh = true
       docker.pull = true
-      docker.ports = ['3000:3000']
+      docker.ports = ['3003:3000']
       docker.volumes = [
         '/var/run/docker.sock:/var/run/docker.sock'
       ]
