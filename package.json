@@ -38,7 +38,7 @@
     "remark-html": "^16.0.1"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/eslintrc": "^3.2.0",
     "@next/bundle-analyzer": "^15.5.4",
     "@playwright/test": "^1.56.0",
     "@tailwindcss/typography": "^0.5.19",
@@ -56,11 +56,11 @@
     "@vitest/ui": "^3.2.4",
     "autoprefixer": "^10.4.21",
     "dependency-cruiser": "^17.0.2",
-    "eslint": "^9.37.0",
-    "eslint-config-next": "^15.5.4",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "^15.1.4",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-no-secrets": "^2.2.1",
-    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^7.0.0",
     "eslint-plugin-security": "^3.0.1",
     "happy-dom": "^20.0.0",
