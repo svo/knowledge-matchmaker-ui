@@ -1,4 +1,18 @@
-# www-qual-is - Claude Code Instructions
+# Knowledge Matchmaker UI - Claude Code Instructions
+
+## Project Purpose
+
+The user-facing interface for the knowledge-matchmaker system. Runs on port 3000. Accepts a user's draft text as input and displays the relationship map output — a set of pointers to literature, grouped by relationship type. Displays pointers only: title, relationship type badge, reason (why this work matters to the user's specific thinking), and a link to the source. No summaries, no AI-generated answers.
+
+### Core Domain Concepts
+
+- `DraftInput` — textarea where user submits their draft, notes, or bullet points
+- `RelationshipMapView` — the primary output display, grouping pointers by relationship type
+- `PointerCard` — displays one pointer: title, relationship type badge, reason text, external source link
+- `RelationshipType` — RESONANCE | CONFLICT | BLIND_SPOT | OPEN_SPACE (drives badge colour and grouping)
+
+Environment variables:
+- `NEXT_PUBLIC_RELATIONSHIP_ENGINE_URL` — URL of the relationship-engine service (http://localhost:28003 in dev)
 
 ## Absolute Non-Negotiables
 
