@@ -33,7 +33,7 @@ const openSpacePointer: Pointer = {
 
 describe("RelationshipMapView", () => {
   it("should render empty state when no pointers", () => {
-    render(<RelationshipMapView map={{ pointers: [] }} />);
+    render(<RelationshipMapView map={{ relationships: [] }} />);
     expect(
       screen.getByText(
         "No relevant works found. Add documents to the corpus first."
@@ -42,7 +42,7 @@ describe("RelationshipMapView", () => {
   });
 
   it("should not render empty state when pointers exist", () => {
-    render(<RelationshipMapView map={{ pointers: [resonancePointer] }} />);
+    render(<RelationshipMapView map={{ relationships: [resonancePointer] }} />);
     expect(
       screen.queryByText(
         "No relevant works found. Add documents to the corpus first."
@@ -52,7 +52,7 @@ describe("RelationshipMapView", () => {
 
   it("should render a PointerCard for each pointer", () => {
     const map: RelationshipMap = {
-      pointers: [resonancePointer, conflictPointer],
+      relationships: [resonancePointer, conflictPointer],
     };
     render(<RelationshipMapView map={map} />);
     expect(screen.getByText("The Extended Mind")).toBeInTheDocument();
@@ -61,31 +61,44 @@ describe("RelationshipMapView", () => {
 
   it("should render pointers grouped by type with headings", () => {
     const map: RelationshipMap = {
-      pointers: [resonancePointer, conflictPointer, blindSpotPointer, openSpacePointer],
+      relationships: [
+        resonancePointer,
+        conflictPointer,
+        blindSpotPointer,
+        openSpacePointer,
+      ],
     };
     render(<RelationshipMapView map={map} />);
-    expect(screen.getByText("Resonance")).toBeInTheDocument();
-    expect(screen.getByText("Conflict")).toBeInTheDocument();
-    expect(screen.getByText("Blind Spots")).toBeInTheDocument();
-    expect(screen.getByText("Open Space")).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "Resonance" })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "Conflict" })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "Blind Spots" })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "Open Space" })
+    ).toBeInTheDocument();
   });
 
   it("should render the Resonance group heading when resonance pointers exist", () => {
-    render(<RelationshipMapView map={{ pointers: [resonancePointer] }} />);
+    render(<RelationshipMapView map={{ relationships: [resonancePointer] }} />);
     expect(
       screen.getByRole("heading", { name: "Resonance" })
     ).toBeInTheDocument();
   });
 
   it("should render the Conflict group heading when conflict pointers exist", () => {
-    render(<RelationshipMapView map={{ pointers: [conflictPointer] }} />);
+    render(<RelationshipMapView map={{ relationships: [conflictPointer] }} />);
     expect(
       screen.getByRole("heading", { name: "Conflict" })
     ).toBeInTheDocument();
   });
 
   it("should not render group headings for empty groups", () => {
-    render(<RelationshipMapView map={{ pointers: [resonancePointer] }} />);
+    render(<RelationshipMapView map={{ relationships: [resonancePointer] }} />);
     expect(
       screen.queryByRole("heading", { name: "Conflict" })
     ).not.toBeInTheDocument();
@@ -96,7 +109,7 @@ describe("RelationshipMapView", () => {
 
   it("should render all four groups when all types present", () => {
     const map: RelationshipMap = {
-      pointers: [
+      relationships: [
         resonancePointer,
         conflictPointer,
         blindSpotPointer,

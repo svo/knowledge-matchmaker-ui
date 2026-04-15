@@ -1,15 +1,17 @@
 import { test, expect } from "@playwright/test";
 
 test.describe("Homepage", () => {
-  test("should load homepage with hero section", async ({ page }) => {
+  test("should load homepage with Knowledge Matchmaker heading", async ({
+    page,
+  }) => {
     await page.goto("/");
 
     await expect(page).toHaveTitle(/qual\.is/i);
 
-    const heroHeading = page.getByRole("heading", {
-      name: /connecting the dots.*decoding complexity/i,
+    const heading = page.getByRole("heading", {
+      name: "Knowledge Matchmaker",
     });
-    await expect(heroHeading).toBeVisible();
+    await expect(heading).toBeVisible();
   });
 
   test("should display navigation links", async ({ page }) => {
@@ -51,16 +53,21 @@ test.describe("Homepage", () => {
       await page.waitForTimeout(300);
     }
 
-    await page.getByRole("link", { name: /blog/i }).first().click();
+    await page
+      .getByRole("navigation")
+      .getByRole("link", { name: /blog/i })
+      .click();
 
     await expect(page).toHaveURL("/blog");
   });
 
-  test("should display services section", async ({ page }) => {
+  test("should display draft input form", async ({ page }) => {
     await page.goto("/");
 
-    const servicesHeading = page.getByRole("heading", { name: "Services" });
-    await expect(servicesHeading).toBeVisible();
+    await expect(page.getByRole("textbox")).toBeVisible();
+    await expect(
+      page.getByRole("button", { name: "Find connections" })
+    ).toBeVisible();
   });
 
   test("should have proper meta tags for SEO", async ({ page }) => {

@@ -1,7 +1,8 @@
 import { Pointer, RelationshipType } from "@/lib/relationship-engine";
 
 const badgeStyles: Record<RelationshipType, string> = {
-  RESONANCE: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
+  RESONANCE:
+    "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
   CONFLICT: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
   BLIND_SPOT:
     "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200",

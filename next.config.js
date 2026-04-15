@@ -4,13 +4,17 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 const isDev = process.env.NODE_ENV === "development";
 
+const relationshipEngineOrigin = new URL(
+  process.env.NEXT_PUBLIC_RELATIONSHIP_ENGINE_URL || "http://localhost:28003"
+).origin;
+
 const contentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} cloud.umami.is;
   style-src 'self' 'unsafe-inline';
   img-src 'self' data: blob:;
   font-src 'self';
-  connect-src 'self' cloud.umami.is api-gateway.umami.dev;
+  connect-src 'self' cloud.umami.is api-gateway.umami.dev ${relationshipEngineOrigin};
   object-src 'none';
   base-uri 'self';
   form-action 'self';

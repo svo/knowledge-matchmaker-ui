@@ -1,4 +1,8 @@
-import { Pointer, RelationshipMap, RelationshipType } from "@/lib/relationship-engine";
+import {
+  Pointer,
+  RelationshipMap,
+  RelationshipType,
+} from "@/lib/relationship-engine";
 import { PointerCard } from "./PointerCard";
 
 const groupOrder: RelationshipType[] = [
@@ -20,7 +24,7 @@ interface RelationshipMapViewProps {
 }
 
 export function RelationshipMapView({ map }: RelationshipMapViewProps) {
-  if (map.pointers.length === 0) {
+  if (map.relationships.length === 0) {
     return (
       <p className="text-gray-500 dark:text-gray-400 text-sm">
         No relevant works found. Add documents to the corpus first.
@@ -28,7 +32,7 @@ export function RelationshipMapView({ map }: RelationshipMapViewProps) {
     );
   }
 
-  const grouped = map.pointers.reduce<Record<string, Pointer[]>>(
+  const grouped = map.relationships.reduce<Record<string, Pointer[]>>(
     (acc, pointer) => {
       const key = pointer.relationship_type;
       if (!acc[key]) acc[key] = [];

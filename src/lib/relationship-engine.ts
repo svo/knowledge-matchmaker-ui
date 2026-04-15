@@ -1,5 +1,5 @@
 const RELATIONSHIP_ENGINE_URL =
-  process.env.NEXT_PUBLIC_RELATIONSHIP_ENGINE_URL || "http://localhost:8003";
+  process.env.NEXT_PUBLIC_RELATIONSHIP_ENGINE_URL || "http://localhost:28003";
 
 export type RelationshipType =
   | "RESONANCE"
@@ -15,7 +15,7 @@ export interface Pointer {
 }
 
 export interface RelationshipMap {
-  pointers: Pointer[];
+  relationships: Pointer[];
 }
 
 export async function buildRelationshipMap(
