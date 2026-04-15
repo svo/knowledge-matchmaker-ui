@@ -14,7 +14,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     SHELL
 
     development.vm.provider :docker do |docker|
-      docker.image = "svanosselaer/www-qual-is-development:latest"
+      docker.image = "svanosselaer/www-knowledge-matchmaker-qual-is-development:latest"
       docker.has_ssh = true
       docker.pull = true
       docker.ports = ['29000:3000']
@@ -28,7 +28,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       development.cache.enable :apt
     end
 
-    development.vm.hostname = 'www-qual-is-vagrant'
+    development.vm.hostname = 'www-knowledge-matchmaker-qual-is-vagrant'
 
     development.vm.provision :ansible do |ansible|
       ansible.playbook = PLAYBOOK

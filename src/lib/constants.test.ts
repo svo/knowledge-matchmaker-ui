@@ -9,7 +9,7 @@ describe("constants", () => {
 
     it("should have the correct URL", () => {
       expect(HOME_OG_IMAGE_URL).toBe(
-        "https://www.qual.is/assets/open-graph-large.png"
+        "https://www.knowledge-matchmaker.qual.is/assets/open-graph-large.png"
       );
     });
 

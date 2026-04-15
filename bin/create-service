@@ -4,8 +4,8 @@ NODE_ENV=production npm run build &&
 version=$(node -p "require('./package.json').version") &&
 
 mkdir -p dist &&
-tar -czf "dist/www-qual-is-${version}.tar.gz" .next public &&
+tar -czf "dist/www-knowledge-matchmaker-qual-is-${version}.tar.gz" .next public &&
 
-packer build -color=false -var "artifact=www-qual-is-${version}.tar.gz" -var "version=${version}" infrastructure/packer/service.pkr.hcl &&
+packer build -color=false -var "artifact=www-knowledge-matchmaker-qual-is-${version}.tar.gz" -var "version=${version}" infrastructure/packer/service.pkr.hcl &&
 
 echo "VERSION=$version"

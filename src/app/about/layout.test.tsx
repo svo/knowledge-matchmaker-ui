@@ -25,12 +25,14 @@ describe("AboutLayout", () => {
   });
 
   it("should export metadata with the correct canonical URL", () => {
-    expect(metadata.alternates?.canonical).toBe("https://www.qual.is/about");
+    expect(metadata.alternates?.canonical).toBe(
+      "https://www.knowledge-matchmaker.qual.is/about"
+    );
   });
 
   it("should export metadata with correct openGraph URL", () => {
     expect(metadata.openGraph).toMatchObject({
-      url: "https://www.qual.is/about",
+      url: "https://www.knowledge-matchmaker.qual.is/about",
       type: "website",
     });
   });

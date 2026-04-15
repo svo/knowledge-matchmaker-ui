@@ -52,14 +52,14 @@ export default async function Post(props: Params) {
             image: post.coverImage,
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://www.qual.is/posts/${post.slug}`,
+              "@id": `https://www.knowledge-matchmaker.qual.is/posts/${post.slug}`,
             },
             publisher: {
               "@type": "Organization",
               name: "Qualis",
               logo: {
                 "@type": "ImageObject",
-                url: "https://www.qual.is/favicon/android-icon-192x192.png",
+                url: "https://www.knowledge-matchmaker.qual.is/favicon/android-icon-192x192.png",
               },
             },
           })}
@@ -95,7 +95,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
       title,
       description: post.excerpt,
       type: "article",
-      url: `https://www.qual.is/posts/${post.slug}`,
+      url: `https://www.knowledge-matchmaker.qual.is/posts/${post.slug}`,
       publishedTime: post.date,
       authors: [post.author.name],
       tags: [
@@ -111,7 +111,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
       description: post.excerpt,
     },
     alternates: {
-      canonical: `https://www.qual.is/posts/${post.slug}`,
+      canonical: `https://www.knowledge-matchmaker.qual.is/posts/${post.slug}`,
     },
   };
 }

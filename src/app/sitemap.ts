@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { getAllPosts } from "@/app/lib/api";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.qual.is";
+  const baseUrl = "https://www.knowledge-matchmaker.qual.is";
   const posts = getAllPosts();
 
   const mostRecentPost = posts[0];

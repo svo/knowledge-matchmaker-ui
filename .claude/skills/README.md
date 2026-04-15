@@ -1,4 +1,4 @@
-# Claude Code Skills for www-qual-is
+# Claude Code Skills for www-knowledge-matchmaker-qual-is
 
 This directory contains custom Claude Code skills tailored to this project's strict architectural and coding standards.
 

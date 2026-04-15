@@ -1,6 +1,6 @@
 # Self-Documenting Code: Real Examples from Codebase
 
-This document provides concrete examples from the www-qual-is codebase demonstrating the no-comments policy in practice. All examples are taken from actual production code.
+This document provides concrete examples from the www-knowledge-matchmaker-qual-is codebase demonstrating the no-comments policy in practice. All examples are taken from actual production code.
 
 ## Table of Contents
 1. [Pattern 1: Expressive Method Names](#pattern-1-expressive-method-names)

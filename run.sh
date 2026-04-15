@@ -9,5 +9,5 @@ if [ ! -d "node_modules" ]; then
     npm ci --omit=dev --ignore-scripts
 fi
 
-echo "Starting www.qual.is..."
+echo "Starting www.knowledge-matchmaker.qual.is..."
 exec npm start

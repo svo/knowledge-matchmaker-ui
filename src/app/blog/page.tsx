@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Engineering Blog | Sean Van Osselaer",
     description:
       "Insights on technical architecture, leadership strategies, process improvement, and hands-on software engineering practices. Complete with working code and real-world examples from scaling engineering teams.",
-    url: "https://www.qual.is/blog",
+    url: "https://www.knowledge-matchmaker.qual.is/blog",
     type: "website",
   },
 };

@@ -1,5 +1,5 @@
 {
-  "name": "www-qual-is",
+  "name": "www-knowledge-matchmaker-qual-is",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",

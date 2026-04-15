@@ -8,11 +8,11 @@ export const metadata: Metadata = {
     title: "About Sean Van Osselaer | Fractional CTO | qual.is",
     description:
       "Fractional CTO specializing in AI-driven development, scalable architecture, and building high-performing engineering teams.",
-    url: "https://www.qual.is/about",
+    url: "https://www.knowledge-matchmaker.qual.is/about",
     type: "website",
   },
   alternates: {
-    canonical: "https://www.qual.is/about",
+    canonical: "https://www.knowledge-matchmaker.qual.is/about",
   },
 };
 

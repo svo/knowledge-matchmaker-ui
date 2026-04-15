@@ -48,7 +48,9 @@ describe("RSS Feed Route", () => {
     const body = await response.text();
 
     expect(body).toContain("<title>Engineering Leadership");
-    expect(body).toContain("<link>https://www.qual.is</link>");
+    expect(body).toContain(
+      "<link>https://www.knowledge-matchmaker.qual.is</link>"
+    );
     expect(body).toContain('version="2.0"');
   });
 
@@ -64,9 +66,11 @@ describe("RSS Feed Route", () => {
     const response = GET();
     const body = await response.text();
 
-    expect(body).toContain("<link>https://www.qual.is/posts/first-post</link>");
     expect(body).toContain(
-      "<link>https://www.qual.is/posts/second-post</link>"
+      "<link>https://www.knowledge-matchmaker.qual.is/posts/first-post</link>"
+    );
+    expect(body).toContain(
+      "<link>https://www.knowledge-matchmaker.qual.is/posts/second-post</link>"
     );
   });
 
@@ -91,7 +95,7 @@ describe("RSS Feed Route", () => {
     const body = await response.text();
 
     expect(body).toContain(
-      '<guid isPermaLink="true">https://www.qual.is/posts/first-post</guid>'
+      '<guid isPermaLink="true">https://www.knowledge-matchmaker.qual.is/posts/first-post</guid>'
     );
   });
 
@@ -100,7 +104,7 @@ describe("RSS Feed Route", () => {
     const body = await response.text();
 
     expect(body).toContain(
-      'href="https://www.qual.is/feed.xml" rel="self" type="application/rss+xml"'
+      'href="https://www.knowledge-matchmaker.qual.is/feed.xml" rel="self" type="application/rss+xml"'
     );
   });
 });

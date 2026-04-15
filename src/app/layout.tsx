@@ -12,16 +12,21 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: `Engineering Leadership & Fractional CTO | SVO | qual.is`,
   description: `Fractional CTO and engineering leadership specialist. AI-driven development, scalable architecture for growing companies.`,
-  metadataBase: new URL("https://www.qual.is"),
+  metadataBase: new URL("https://www.knowledge-matchmaker.qual.is"),
   keywords: `Sean Van Osselaer, SVO, fractional CTO, engineering leadership, technical strategy, fractional CTO Australia`,
-  authors: [{ name: "Sean Van Osselaer", url: "https://www.qual.is" }],
+  authors: [
+    {
+      name: "Sean Van Osselaer",
+      url: "https://www.knowledge-matchmaker.qual.is",
+    },
+  ],
   creator: "Sean Van Osselaer",
   publisher: "Sean Van Osselaer",
   openGraph: {
     title: "Engineering Leadership & Fractional CTO | SVO | qual.is",
     description:
       "Fractional CTO and engineering leadership specialist. AI-driven development, scalable architecture for growing companies.",
-    url: "https://www.qual.is",
+    url: "https://www.knowledge-matchmaker.qual.is",
     siteName: "qual.is",
     images: [HOME_OG_IMAGE_URL],
     locale: "en_US",
@@ -35,7 +40,7 @@ export const metadata: Metadata = {
     images: [HOME_OG_IMAGE_URL],
   },
   alternates: {
-    canonical: "https://www.qual.is",
+    canonical: "https://www.knowledge-matchmaker.qual.is",
   },
 };
 
@@ -51,7 +56,7 @@ export default function RootLayout({
           defer
           src="https://cloud.umami.is/script.js"
           data-website-id="dd0b2581-9ffc-4bcb-8423-6973b138c1e4"
-          data-domains="qual.is,www.qual.is"
+          data-domains="qual.is,www.knowledge-matchmaker.qual.is"
         ></script>
         <link
           rel="apple-touch-icon"
@@ -102,21 +107,23 @@ export default function RootLayout({
             "@graph": [
               {
                 "@type": "WebSite",
-                "@id": "https://www.qual.is/#website",
+                "@id": "https://www.knowledge-matchmaker.qual.is/#website",
                 name: "Engineering Leadership & Fractional CTO | SVO | qual.is",
-                url: "https://www.qual.is",
+                url: "https://www.knowledge-matchmaker.qual.is",
                 description:
                   "Fractional CTO and engineering leadership specialist. AI-driven development, scalable architecture for growing companies.",
-                author: { "@id": "https://www.qual.is/about" },
+                author: {
+                  "@id": "https://www.knowledge-matchmaker.qual.is/about",
+                },
               },
               {
                 "@type": "Person",
-                "@id": "https://www.qual.is/about",
+                "@id": "https://www.knowledge-matchmaker.qual.is/about",
                 name: "Sean Van Osselaer",
                 givenName: "Sean",
                 familyName: "Van Osselaer",
                 alternateName: "SVO",
-                url: "https://www.qual.is",
+                url: "https://www.knowledge-matchmaker.qual.is",
                 jobTitle: "Fractional CTO",
                 description:
                   "Fractional CTO specializing in AI-driven development, scalable architecture, and building high-performing engineering teams.",
@@ -127,20 +134,22 @@ export default function RootLayout({
               },
               {
                 "@type": "ProfessionalService",
-                "@id": "https://www.qual.is/#service",
+                "@id": "https://www.knowledge-matchmaker.qual.is/#service",
                 name: "Fractional CTO Services",
-                provider: { "@id": "https://www.qual.is/about" },
+                provider: {
+                  "@id": "https://www.knowledge-matchmaker.qual.is/about",
+                },
                 serviceType: "Fractional CTO Services",
                 description:
                   "Engineering leadership, AI-driven development strategy, software architecture, team scaling, and technical strategy consulting.",
                 areaServed: "Global",
-                url: "https://www.qual.is/about",
+                url: "https://www.knowledge-matchmaker.qual.is/about",
               },
               {
                 "@type": "FAQPage",
-                "@id": "https://www.qual.is/svo#faq",
+                "@id": "https://www.knowledge-matchmaker.qual.is/svo#faq",
                 name: "Fractional CTO Services FAQ",
-                url: "https://www.qual.is/about",
+                url: "https://www.knowledge-matchmaker.qual.is/about",
                 mainEntity: [
                   {
                     "@type": "Question",

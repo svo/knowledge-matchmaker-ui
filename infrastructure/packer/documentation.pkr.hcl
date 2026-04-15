@@ -1,7 +1,7 @@
 source "docker" "arm64" {
   commit      = "true"
   image       = "redocly/redoc"
-  run_command = ["-d", "-i", "-t", "--name", "packer-www-qual-is-documentation", "{{.Image}}", "/bin/sh"]
+  run_command = ["-d", "-i", "-t", "--name", "packer-www-knowledge-matchmaker-qual-is-documentation", "{{.Image}}", "/bin/sh"]
   changes = [
     "ENV SPEC_URL ${var.version}.json",
     "CMD [\"sh\", \"/usr/local/bin/docker-run.sh\"]"
@@ -12,7 +12,7 @@ source "docker" "arm64" {
 source "docker" "amd64" {
   commit      = "true"
   image       = "redocly/redoc"
-  run_command = ["-d", "-i", "-t", "--name", "packer-www-qual-is-documentation", "{{.Image}}", "/bin/sh"]
+  run_command = ["-d", "-i", "-t", "--name", "packer-www-knowledge-matchmaker-qual-is-documentation", "{{.Image}}", "/bin/sh"]
   changes = [
     "ENV SPEC_URL ${var.version}.json",
     "CMD [\"sh\", \"/usr/local/bin/docker-run.sh\"]"
@@ -43,7 +43,7 @@ build {
 
   post-processors {
     post-processor "docker-tag" {
-      repository = "svanosselaer/www-qual-is-documentation"
+      repository = "svanosselaer/www-knowledge-matchmaker-qual-is-documentation"
       tags       = ["${source.name}"]
     }
   }

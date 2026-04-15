@@ -1,6 +1,6 @@
 # qual.is
 
-[![Service](https://github.com/Qualis/www-qual-is/actions/workflows/service.yml/badge.svg)](https://github.com/Qualis/www-qual-is/actions/workflows/service.yml)
+[![Service](https://github.com/Qualis/www-knowledge-matchmaker-qual-is/actions/workflows/service.yml/badge.svg)](https://github.com/Qualis/www-knowledge-matchmaker-qual-is/actions/workflows/service.yml)
 
 ## Features
 
@@ -19,7 +19,7 @@ This project follows **Hexagonal Architecture**, organizing code into distinct l
 ### Project Structure
 
 ```
-www-qual-is/
+www-knowledge-matchmaker-qual-is/
 ├── _posts/                # Markdown blog posts
 ├── decisions/             # Architecture Decision Records (ADRs)
 ├── .github/

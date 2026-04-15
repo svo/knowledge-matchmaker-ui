@@ -1,7 +1,7 @@
 source "docker" "arm64" {
   commit      = "true"
   image       = "node:18-alpine"
-  run_command = ["-d", "-i", "-t", "--name", "packer-www-qual-is-mock-arm64", "--entrypoint", "/bin/sh", "{{.Image}}"]
+  run_command = ["-d", "-i", "-t", "--name", "packer-www-knowledge-matchmaker-qual-is-mock-arm64", "--entrypoint", "/bin/sh", "{{.Image}}"]
   changes = [
     "WORKDIR /app",
     "ENTRYPOINT [\"prism\"]",
@@ -13,7 +13,7 @@ source "docker" "arm64" {
 source "docker" "amd64" {
   commit      = "true"
   image       = "node:18-alpine"
-  run_command = ["-d", "-i", "-t", "--name", "packer-www-qual-is-mock-amd64", "--entrypoint", "/bin/sh", "{{.Image}}"]
+  run_command = ["-d", "-i", "-t", "--name", "packer-www-knowledge-matchmaker-qual-is-mock-amd64", "--entrypoint", "/bin/sh", "{{.Image}}"]
   changes = [
     "WORKDIR /app",
     "ENTRYPOINT [\"prism\"]",
@@ -47,7 +47,7 @@ build {
 
   post-processors {
     post-processor "docker-tag" {
-      repository = "svanosselaer/www-qual-is-mock"
+      repository = "svanosselaer/www-knowledge-matchmaker-qual-is-mock"
       tags       = ["${source.name}"]
     }
   }

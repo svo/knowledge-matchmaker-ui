@@ -1,6 +1,6 @@
 import { getAllPosts } from "@/app/lib/api";
 
-const BASE_URL = "https://www.qual.is";
+const BASE_URL = "https://www.knowledge-matchmaker.qual.is";
 
 function escapeXml(text: string): string {
   return text

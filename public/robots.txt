@@ -10,4 +10,4 @@ Allow: /
 User-agent: Anthropic-AI
 Allow: /
 
-Sitemap: https://www.qual.is/sitemap.xml
+Sitemap: https://www.knowledge-matchmaker.qual.is/sitemap.xml

@@ -1,4 +1,4 @@
-source "docker" "www-qual-is-service" {
+source "docker" "www-knowledge-matchmaker-qual-is-service" {
   changes     = ["EXPOSE 3000", "CMD [\"/run.sh\"]"]
   commit      = "true"
   image       = "debian:12-slim"
@@ -14,7 +14,7 @@ variable "version" {
 }
 
 build {
-  sources = ["source.docker.www-qual-is-service"]
+  sources = ["source.docker.www-knowledge-matchmaker-qual-is-service"]
 
   provisioner "shell" {
     inline = [
@@ -71,7 +71,7 @@ build {
   }
 
   post-processor "docker-tag" {
-    repository = "svanosselaer/www-qual-is-service"
+    repository = "svanosselaer/www-knowledge-matchmaker-qual-is-service"
     tags       = ["latest", var.version]
   }
 }
