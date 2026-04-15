@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "404 - Page Not Found | qual.is",
+  title: "404 - Page Not Found | Knowledge Matchmaker",
 };
 
 export default function NotFound() {
@@ -16,20 +16,12 @@ export default function NotFound() {
           <p className="text-2xl text-accent-3 dark:text-accent-1 mb-8">
             This page could not be found.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/"
-              className="bg-primary hover:bg-highlight dark:hover:bg-highlight-dark hover:text-accent-3 border-2 border-primary text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-center"
-            >
-              Go Home
-            </Link>
-            <Link
-              href="/blog"
-              className="border-2 border-primary text-primary dark:text-primary-dark hover:bg-primary hover:text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-center"
-            >
-              Read the Blog
-            </Link>
-          </div>
+          <Link
+            href="/"
+            className="bg-primary hover:bg-highlight dark:hover:bg-highlight-dark hover:text-accent-3 border-2 border-primary text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-center"
+          >
+            Go Home
+          </Link>
         </div>
       </section>
     </main>

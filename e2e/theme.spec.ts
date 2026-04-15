@@ -37,7 +37,7 @@ test.describe("Theme Switcher", () => {
     }
   });
 
-  test("should persist theme preference across page navigation", async ({
+  test("should persist theme preference across page reload", async ({
     page,
   }) => {
     await page.goto("/");
@@ -57,15 +57,17 @@ test.describe("Theme Switcher", () => {
         .getAttribute("data-theme");
       const classAfterSwitch = await page.locator("html").getAttribute("class");
 
-      await page.goto("/about");
+      await page.reload();
 
-      const themeOnNewPage = await page
+      const themeAfterReload = await page
         .locator("html")
         .getAttribute("data-theme");
-      const classOnNewPage = await page.locator("html").getAttribute("class");
+      const classAfterReload = await page
+        .locator("html")
+        .getAttribute("class");
 
-      expect(themeOnNewPage).toBe(themeAfterSwitch);
-      expect(classOnNewPage).toBe(classAfterSwitch);
+      expect(themeAfterReload).toBe(themeAfterSwitch);
+      expect(classAfterReload).toBe(classAfterSwitch);
     }
   });
 });

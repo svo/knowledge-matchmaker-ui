@@ -67,24 +67,6 @@ const nextConfig = {
       },
     ];
   },
-  async redirects() {
-    return [
-      {
-        source: "/svo",
-        destination: "/about",
-        permanent: true,
-      },
-    ];
-  },
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.fallback = {
-        fs: false,
-        path: false,
-      };
-    }
-    return config;
-  },
 };
 
 module.exports = withBundleAnalyzer(nextConfig);

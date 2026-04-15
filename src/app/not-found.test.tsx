@@ -21,13 +21,7 @@ describe("NotFound", () => {
     expect(homeLink).toHaveAttribute("href", "/");
   });
 
-  it("should render a link to the blog page", () => {
-    render(<NotFound />);
-    const blogLink = screen.getByRole("link", { name: "Read the Blog" });
-    expect(blogLink).toHaveAttribute("href", "/blog");
-  });
-
   it("should export metadata with the correct title", () => {
-    expect(metadata.title).toBe("404 - Page Not Found | qual.is");
+    expect(metadata.title).toBe("404 - Page Not Found | Knowledge Matchmaker");
   });
 });
